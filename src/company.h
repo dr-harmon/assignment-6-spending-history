@@ -14,3 +14,11 @@ private:
     std::string name;
     std::string city;
 };
+
+namespace std {
+    template <> struct hash<Company> {
+        size_t operator()(const Company& company) const {
+            return std::hash<std::string>()(company.getName());
+        }
+    };
+}

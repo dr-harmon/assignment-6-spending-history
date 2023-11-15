@@ -9,6 +9,7 @@ public:
     const Company& getCompany() const;
     const Money& getAmount() const;
     bool operator ==(const TotalSpent& other) const;
+    bool operator >(const TotalSpent& other) const;
 private:
     Company company;
     Money amount;

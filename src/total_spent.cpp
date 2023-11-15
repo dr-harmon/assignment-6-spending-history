@@ -20,3 +20,8 @@ bool TotalSpent::operator ==(const TotalSpent& other) const
 {
     return (company == other.company) && (amount == other.amount);
 }
+
+bool TotalSpent::operator >(const TotalSpent& other) const
+{
+    return amount > other.amount;
+}
